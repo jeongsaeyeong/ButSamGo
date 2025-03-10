@@ -13,6 +13,7 @@ import Mypage from './components/Mypage/Mypage'
 import JoinSuccess from './components/User/JoinSuccess'
 import Detail from './components/Detail/Detail'
 import Write from './components/Write/Write'
+import Student from './components/User/Student'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/join' element={<Join />} />
         <Route path='/joinsuccess' element={<JoinSuccess />} />
         <Route path='/mypage' element={<Mypage />} />
+        <Route path='/studentid' element={<Student />} />
       </Routes>
       <Nav />
     </BrowserRouter>
