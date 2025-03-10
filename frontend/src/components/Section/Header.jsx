@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <div className='Header_Wrap'>
-            <Link path='/' className="logo"><img src={Logo} alt="" /></Link>
-            <Link path='/'><img src={Mypage} alt="" /></Link>
+            <Link to='/' className="logo"><img src={Logo} alt="" /></Link>
+            <Link to='/mypage'><img src={Mypage} alt="" /></Link>
         </div>
     )
 }

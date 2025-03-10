@@ -5,6 +5,7 @@ a {
 }
 
 body {
+    position: relative;
     background-color: var(--sub);
     display: flex;
     justify-content: center;
@@ -15,11 +16,12 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 393px;
-    min-height: 852px;
+    min-height: 800px;
     height: 100vh;
+    max-height: 812px;
     margin: 0 auto;
     background-color: var(--white);
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 90px;
 }
 

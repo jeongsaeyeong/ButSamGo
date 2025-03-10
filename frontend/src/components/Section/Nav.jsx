@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Calendar from '../../assets/img/icon/calendar.svg'
 import Calendar_Full from '../../assets/img/icon/calendar_full.svg'
 import Home from '../../assets/img/icon/home.svg'
@@ -12,13 +12,15 @@ import Map_Full from '../../assets/img/icon/map_full.svg'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
+    const [Page, setPage] = useState('Home');
+
     return (
         <div className='Nav_wrap'>
-            <Link path='/'><img src={Calendar} alt="" /></Link>
-            <Link path='/'><img src={Info} alt="" /></Link>
-            <Link path='/'><img src={Home_Full} alt="" /></Link>
-            <Link path='/'><img src={Community} alt="" /></Link>
-            <Link path='/'><img src={Map} alt="" /></Link>
+            <Link to='/calendar'><img onClick={() => { setPage('Calendar') }} src={Page === 'Calendar' ? Calendar_Full : Calendar} alt="" /></Link>
+            <Link to='/info'><img onClick={() => { setPage('Info') }} src={Page === 'Info' ? Info_Full : Info} alt="" /></Link>
+            <Link to='/'><img onClick={() => { setPage('Home') }} src={Page === 'Home' ? Home_Full : Home} alt="" /></Link>
+            <Link to='/community'><img onClick={() => { setPage('Community') }} src={Page === 'Community' ? Community_Full : Community} alt="" /></Link>
+            <Link to='/map'><img onClick={() => { setPage('Map') }} src={Page === 'Map' ? Map_Full : Map} alt="" /></Link>
         </div>
     )
 }

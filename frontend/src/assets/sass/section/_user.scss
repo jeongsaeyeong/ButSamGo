@@ -1,0 +1,60 @@
+.Login_wrap, .Join_wrap, .JoinSuccess_wrap {
+    z-index: 10;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .back_btn {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+
+        img {
+            width: 24px;
+        }
+    }
+
+    h1 {
+        font-size: 24px;
+        color: var(--main01);
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 26px;
+    }
+
+    input {
+        width: 100%;
+        padding: 15px 20px;
+        border: 1px solid var(--main01);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    ::placeholder {
+        color: var(--gray01);
+    }
+
+    .login_button, .join_button, .goLogin {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main01);
+        border-radius: 10px;
+        color: var(--white);
+        margin-bottom: 10px;
+    }
+
+    >a {
+        color: var(--gray02);
+    }
+}

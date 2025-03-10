@@ -1,0 +1,45 @@
+.Calendar_wrap {
+    .calendar_list {
+        height: 620px;
+        overflow-y: scroll;
+        padding: 20px;
+
+        .calendar {
+            margin-bottom: 10px;
+            opacity: 50%;
+
+            h3 {
+                font-size: 14px;
+                color: var(--main01);
+                margin-bottom: 8px;
+            }
+
+            div {
+                cursor: pointer;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--main01);
+                font-size: 12px;
+                border-radius: 5px;
+                border: 1px solid var(--main01);
+            }
+        }
+
+        .top {
+            opacity: 1;
+
+            .title {
+                font-weight: 700;
+            }
+
+            .content {
+                background-color: var(--main01);
+                color: var(--sub);
+                font-size: 13px;
+            }
+        }
+    }
+}
