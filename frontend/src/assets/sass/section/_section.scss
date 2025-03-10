@@ -1,0 +1,34 @@
+.Header_Wrap {
+    position: absolute;
+    width: 393px;
+    height: 60px;
+    background-color: var(--main01);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+
+    .logo {
+        width: 60px;
+    }
+
+    a {
+        width: 21px;
+    }
+}
+
+.Nav_wrap {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 393px;
+    margin-bottom: 30px;
+    height: 60px;
+    padding: 0 40px;
+
+    img {
+        width: 25px;
+    }
+}

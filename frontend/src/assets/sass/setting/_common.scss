@@ -1,0 +1,42 @@
+button,
+a {
+    cursor: pointer;
+    background-color: var(--none);
+}
+
+body {
+    background-color: var(--sub);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 393px;
+    min-height: 852px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.none {
+    display: none !important;
+}
+
+input {
+    outline: none;
+}

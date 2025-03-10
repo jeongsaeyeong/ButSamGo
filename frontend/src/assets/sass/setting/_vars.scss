@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'TTHakgyoansimKkwabaegiR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKkwabaegiR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --mainfont: "pretendard";
+    --subfont: 'TTHakgyoansimKkwabaegiR';
+
+    --main01: #0E6D62;
+    --main02: #61BAB0;
+    --sub: #FFFAEB;
+    --black: #121212;
+    --white: #FFFFFF;
+    --red: #CC3F3F;
+    --gray01: #C3C3C3;
+    --gray02: #595959;
+    --none: #00000000;
+
+    color: var(--black);
+    font-family: var(--mainfont);
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
