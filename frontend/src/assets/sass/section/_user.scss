@@ -66,32 +66,70 @@
 .Student_wrap {
     >div {
         padding: 20px;
+        padding-bottom: 0;
+        overflow: hidden;
 
         >button {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .studentid {
+            position: relative;
             width: 100%;
             height: 535px;
             border-radius: 10px;
             background-color: var(--main01);
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            background-image: url(../../img/image/studentid_background.png);
+            background-position: center;
+            background-size: cover;
 
             .photo {
-                background-color: var(--white);
-                width: 150px;
-                height: 200px;
-                border-radius: 10px;
-                margin-bottom: 148px;
+                padding-top: 90px;
+
+                >img {
+                    background-color: var(--white);
+                    object-fit: cover;
+                    width: 204px;
+                    height: 250px;
+                }
             }
 
-            >img {
-                width: 45px;
+            .name {
+                margin-top: 20px;
+                width: 200px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 45px;
+                font-family: var(--subfont);
+                background-color: #EEEEEE;
             }
+
+            .box {
+                position: absolute;
+                bottom: 10px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 40px;
+                }
+            }
+        }
+
+
+        .upload_btn {
+            background-color: var(--main01);
+            height: 40px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 5px;
+            color: var(--white);
+            margin-bottom: 0;
         }
     }
 }
@@ -103,6 +141,8 @@
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
+
+
 
     >img {
         width: 97px;
@@ -136,6 +176,17 @@
         width: 100%;
         height: 50px;
         margin-bottom: 130px;
+    }
+
+    .btn {
+        background-color: var(--white);
+        border: 1px solid var(--main01);
+        margin-bottom: 10px;
+        color: var(--main01);
+    }
+
+    .delete {
+        margin-bottom: 10px;
     }
 
 }

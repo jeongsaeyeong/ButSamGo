@@ -148,6 +148,9 @@
             }
 
             .comment_list {
+                height: 155px;
+                overflow-y: scroll;
+
                 .comment {
                     font-size: 12px;
                     display: flex;
@@ -167,10 +170,11 @@
         height: 30px;
 
         input {
-            padding-bottom: 5px;
             padding-left: 10px;
             width: 80%;
             border-radius: 5px;
+            font-size: 10px;
+            color: var(--main01);
             border: 1px solid var(--main01);
         }
 
@@ -192,8 +196,7 @@
     }
 }
 
-.Write_wrap {
-
+.Write_wrap, .InfoEat_Wrap {
     >div {
         padding: 20px;
 
@@ -201,14 +204,36 @@
             margin-bottom: 20px;
         }
 
+        .box {
+            display: flex;
+            justify-content: space-between;
+
+            select {
+                outline: none;
+                border: 1px solid var(--main01);
+                width: 100px;
+                text-align: center;
+                font-size: 13px;
+                color: var(--main01);
+            }
+
+            option {
+                font-size: 11px;
+            }
+        }
+
         input,
         textarea {
+            outline: none;
+            margin: 5px 0;
             width: 100%;
             padding: 12px 18px;
             border-radius: 5px;
             border: 1px solid var(--main01);
             font-size: 14px;
         }
+
+
 
         .file {
             padding-left: 0;
@@ -223,7 +248,7 @@
         textarea {
             resize: none;
             height: 300px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         >div {

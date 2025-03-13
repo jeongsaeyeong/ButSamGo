@@ -14,6 +14,7 @@ import JoinSuccess from './components/User/JoinSuccess'
 import Detail from './components/Detail/Detail'
 import Write from './components/Write/Write'
 import Student from './components/User/Student'
+import InfoEat from './components/Info/InfoEat'
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         <Route path='/calendar' element={<Calendar />} />
         <Route path='/community' element={<Community />} />
         <Route path='/write' element={<Write />} />
+        <Route path='/write_eat' element={<InfoEat />} />
+        <Route path='/write/:id' element={<Write />} />
         <Route path='/community/:page' element={<Detail />} />
         <Route path='/info' element={<Info />} />
         <Route path='/map' element={<Map />} />

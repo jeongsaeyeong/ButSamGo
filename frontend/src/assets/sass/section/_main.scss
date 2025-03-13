@@ -82,15 +82,16 @@
             }
 
             .eat_bottom {
-                width: 200%;
                 display: flex;
-                overflow-x: hidden;
+                overflow-x: auto;
+                gap: 10px;
+                padding-bottom: 10px;
 
                 .eat {
-                    width: 140px;
+                    flex-shrink: 0;
+                    min-width: 140px;
                     height: 120px;
                     border-radius: 10px;
-                    margin: 0 10px;
                     border: 1px solid var(--main01);
 
                     h4 {
@@ -106,17 +107,22 @@
                     }
 
                     p {
-                        text-align: center;
-                        height: 96px;
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        line-height: 1.3;
                         font-size: 10px;
+                        height: 96px;
+                        justify-content: center;
+                        line-height: 1.3;
+                        text-align: center;
+                        align-items: center;
+                        flex-direction: column;
                     }
+                }
 
+                .not_today {
+                    opacity: 50%;
                 }
             }
+
         }
 
         .article_wrap {
