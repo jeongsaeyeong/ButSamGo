@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+@font-face {
+    font-family: 'Ownglyph_corncorn-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --mainfont: "Ownglyph_corncorn-Rg";
+    --subfont: 'Limelight';
+
+    --main01: #007FB1;
+    --main02: #70C8EA;
+    --sub: #E9C758;
+    --black: #121212;
+    --white: #FFFFFF;
+    --red: #CC3F3F;
+    --gray01: #C3C3C3;
+    --gray02: #595959;
+    --none: #00000000;
+
+    color: var(--main01);
+    font-family: var(--mainfont);
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}

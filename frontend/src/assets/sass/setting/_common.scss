@@ -1,0 +1,52 @@
+button,
+a {
+    cursor: pointer;
+    background-color: var(--none);
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../img/image/background.png);
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    display: flex;
+}
+
+.container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 814px;
+    height: 814px;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 10px 10px 0 0 #007FB1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.none {
+    display: none !important;
+}
+
+input {
+    outline: none;
+}
