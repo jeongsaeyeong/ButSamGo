@@ -18,7 +18,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $filePath = $uploadDir . $fileName;
 
     if (move_uploaded_file($fileTmp, $filePath)) {
-        $imageUrl = "http://ooooo0516.dothome.co.kr/backend/uploads/" . $fileName;
+        $imageUrl = "http://butsamgo.dothome.co.kr/backend/uploads/" . $fileName;
     } else {
         echo json_encode(["success" => false, "error" => "파일 업로드에 실패했습니다."]);
         exit;

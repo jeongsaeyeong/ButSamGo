@@ -26,7 +26,7 @@ const Login = () => {
     }
 
     const handleLogin = async () => {
-        const response = await fetch("http://ooooo0516.dothome.co.kr/backend/login.php", {
+        const response = await fetch("http://butsamgo.dothome.co.kr/backend/login.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ useremail, userpass }),

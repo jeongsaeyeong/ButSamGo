@@ -11,6 +11,7 @@ const Detail = () => {
     const [newComment, setNewComment] = useState('');
 
     const userId = localStorage.getItem('userid');
+    console.log(userId)
 
     const onBack = () => {
         navigate(-1);
@@ -21,12 +22,13 @@ const Detail = () => {
     };
 
     const fetchPostDetails = () => {
-        fetch(`http://ooooo0516.dothome.co.kr/backend/post_detail.php?id=${params.page}`)
+        fetch(`http://butsamgo.dothome.co.kr/backend/post_detail.php?id=${params.page}`)
             .then((response) => response.json())
             .then((data) => {
                 if (data.success) {
                     setPost(data.post);
                     setComments(data.comments);
+                    console.log('data', data)
                 } else {
                     console.error(data.error);
                 }
@@ -40,7 +42,7 @@ const Detail = () => {
 
     const deletePost = () => {
         if (window.confirm("정말로 이 게시글을 삭제하시겠습니까?")) {
-            fetch('http://ooooo0516.dothome.co.kr/backend/delete_post.php', {
+            fetch('http://butsamgo.dothome.co.kr/backend/delete_post.php', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ post_id: params.page })
@@ -68,7 +70,7 @@ const Detail = () => {
             return;
         }
 
-        fetch('http://ooooo0516.dothome.co.kr/backend/add_comment.php', {
+        fetch('http://butsamgo.dothome.co.kr/backend/add_comment.php', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

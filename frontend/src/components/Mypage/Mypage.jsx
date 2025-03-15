@@ -14,7 +14,7 @@ const Mypage = () => {
 
     const fetchUserInfo = async () => {
         try {
-            const response = await fetch(`http://ooooo0516.dothome.co.kr/backend/get_user.php?userid=${userid}`);
+            const response = await fetch(`http://butsamgo.dothome.co.kr/backend/get_user.php?userid=${userid}`);
             const data = await response.json();
             if (data.success) {
                 setUser(data.user);
@@ -26,10 +26,9 @@ const Mypage = () => {
         }
     };
 
-    // ✅ 회원 탈퇴 함수
     const deleteAccount = () => {
         if (window.confirm("정말로 회원 탈퇴하시겠습니까? 탈퇴하면 복구할 수 없습니다.")) {
-            fetch('http://ooooo0516.dothome.co.kr/backend/delete_user.php', {
+            fetch('http://butsamgo.dothome.co.kr/backend/delete_user.php', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user_id: userid }),

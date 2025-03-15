@@ -13,7 +13,7 @@ const InfoEat = () => {
             return;
         }
 
-        fetch('http://ooooo0516.dothome.co.kr/backend/add_meal.php', {
+        fetch('http://butsamgo.dothome.co.kr/backend/add_meal.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({

@@ -23,8 +23,8 @@ if (isset($_FILES['student_id']) && $_FILES['student_id']['error'] === UPLOAD_ER
     $filePath = $uploadDir . $fileName;
 
     if (move_uploaded_file($fileTmp, $filePath)) {
-        chmod($filePath, 0644); // ✅ 권한 설정
-        $imageUrl = "http://ooooo0516.dothome.co.kr/backend/uploads/" . $fileName;
+        chmod($filePath, 0644);
+        $imageUrl = "http://butsamgo.dothome.co.kr/backend/uploads/" . $fileName;
 
         $sql = "UPDATE users SET student_id_image = ? WHERE id = ?";
         $stmt = $conn->prepare($sql);

@@ -30,7 +30,7 @@ const Write = () => {
     };
 
     const fetchPostDetails = () => {
-        fetch(`http://ooooo0516.dothome.co.kr/backend/post_detail.php?id=${params.id}`)
+        fetch(`http://butsamgo.dothome.co.kr/backend/post_detail.php?id=${params.id}`)
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -65,8 +65,8 @@ const Write = () => {
         }
 
         const endpoint = isEdit 
-            ? 'http://ooooo0516.dothome.co.kr/backend/update_post.php' 
-            : 'http://ooooo0516.dothome.co.kr/backend/write_post.php';
+            ? 'http://butsamgo.dothome.co.kr/backend/update_post.php' 
+            : 'http://butsamgo.dothome.co.kr/backend/write_post.php';
 
         if (isEdit) {
             formData.append("post_id", params.id);

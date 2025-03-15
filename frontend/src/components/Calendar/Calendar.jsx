@@ -6,7 +6,7 @@ const Calendar = () => {
     const navigation = useNavigate();
 
     useEffect(() => {
-        fetch('http://ooooo0516.dothome.co.kr/backend/schedule.php')
+        fetch('http://butsamgo.dothome.co.kr/backend/schedule.php')
             .then(response => response.json())
             .then(data => {
                 const sortedData = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));

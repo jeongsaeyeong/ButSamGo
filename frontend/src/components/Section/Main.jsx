@@ -18,7 +18,7 @@ const Main = () => {
 
         const fetchUserInfo = async () => {
             try {
-                const response = await fetch(`http://ooooo0516.dothome.co.kr/backend/get_user.php?userid=${userid}`);
+                const response = await fetch(`http://butsamgo.dothome.co.kr/backend/get_user.php?userid=${userid}`);
                 const data = await response.json();
                 if (data.success) {
                     setUser(data.user);
@@ -36,7 +36,7 @@ const Main = () => {
     useEffect(() => {
         const fetchMeals = async () => {
             try {
-                const response = await fetch('http://ooooo0516.dothome.co.kr/backend/get_meals.php');
+                const response = await fetch('http://butsamgo.dothome.co.kr/backend/get_meals.php');
                 const data = await response.json();
                 if (data.success) {
                     setMeals(data.meals);
@@ -54,7 +54,7 @@ const Main = () => {
     useEffect(() => {
         const fetchPopularPosts = async () => {
             try {
-                const response = await fetch('http://ooooo0516.dothome.co.kr/backend/get_popular_posts.php');
+                const response = await fetch('http://butsamgo.dothome.co.kr/backend/get_popular_posts.php');
                 const data = await response.json();
                 if (data.success) {
                     setPopularPosts(data.posts);
@@ -110,9 +110,9 @@ const Main = () => {
                                     <div key={meal.id} className={`eat ${!isToday ? 'not_today' : ''}`}>
                                         <h4>{new Date(meal.schedule_date).toLocaleDateString('ko-KR')}</h4>
                                         <p>
-                                            {meal.content.split('\n').map((line, index) => (
+                                            {meal.content.split(',').map((item, index) => (
                                                 <span key={index}>
-                                                    {line}
+                                                    {item.trim()}
                                                     <br />
                                                 </span>
                                             ))}

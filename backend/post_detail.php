@@ -10,7 +10,7 @@ if ($post_id === 0) {
     exit;
 }
 
-$sql = "SELECT id, title, content, created_at, board_id, image_url FROM posts WHERE id = ?";
+$sql = "SELECT id, user_id, board_id, title, content, image_url, schedule_date, created_at FROM posts WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $post_id);
 $stmt->execute();
@@ -30,7 +30,6 @@ while ($row = $comment_result->fetch_assoc()) {
 
 $conn->close();
 
-// 데이터 반환
 echo json_encode([
     "success" => true,
     "post" => $post_result,

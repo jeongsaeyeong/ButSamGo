@@ -17,7 +17,7 @@ const Student = () => {
     useEffect(() => {
         const fetchStudentId = async () => {
             try {
-                const response = await fetch(`http://ooooo0516.dothome.co.kr/backend/get_user.php?userid=${userId}`);
+                const response = await fetch(`http://butsamgo.dothome.co.kr/backend/get_user.php?userid=${userId}`);
                 const data = await response.json();
                 if (data.success) {
                     setPreview(data.user.student_id_image);
@@ -49,7 +49,7 @@ const Student = () => {
         formData.append('user_id', userId);
         formData.append('student_id', image);
 
-        fetch('http://ooooo0516.dothome.co.kr/backend/upload_student_id.php', {
+        fetch('http://butsamgo.dothome.co.kr/backend/upload_student_id.php', {
             method: 'POST',
             body: formData,
         })

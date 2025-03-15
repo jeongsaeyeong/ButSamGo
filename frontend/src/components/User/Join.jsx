@@ -33,13 +33,13 @@ const Join = () => {
     }
 
     const handleRegister = async () => {
-        const response = await fetch("http://ooooo0516.dothome.co.kr/backend/join.php", {
+        const response = await fetch("http://butsamgo.dothome.co.kr/backend/join.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ useremail, username, userpass }),
         });
         const data = await response.json();
-        alert(data.success ? navigation('/joinsuccess') : "회원가입 실패!");
+        data.success ?  navigation('/joinsuccess') : alert("회원가입 실패!");
     };
 
     return (

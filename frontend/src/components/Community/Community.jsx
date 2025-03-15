@@ -15,7 +15,7 @@ const Community = () => {
 
     useEffect(() => {
         const boardId = tab === 'free' ? 3 : 4;
-        fetch(`http://ooooo0516.dothome.co.kr/backend/community.php?board_id=${boardId}`)
+        fetch(`http://butsamgo.dothome.co.kr/backend/community.php?board_id=${boardId}`)
             .then(response => response.json())
             .then(data => {
                 setComm(data);
@@ -28,7 +28,7 @@ const Community = () => {
         <div className='Community_wrap container'>
             <div className="tab">
                 <h4 onClick={() => setTab('free')} className={tab === 'free' ? 'click' : ''}>자유게시판</h4>
-                <h4 onClick={() => setTab('3th')} className={tab === '3th' ? 'click' : ''}>고2 게시판</h4>
+                <h4 onClick={() => setTab('3th')} className={tab === '3th' ? 'click' : ''}>고3 게시판</h4>
             </div>
             <div className="article_wrap">
                 {comm.length > 0 ? (

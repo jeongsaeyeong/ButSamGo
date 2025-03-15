@@ -41,7 +41,7 @@
             }
 
             .info {
-                width: 100%;
+                width: calc(100% - 125px);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -49,10 +49,22 @@
                 .title {
                     font-weight: 700;
                     font-size: 12px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 1.5;
+                    height: calc(1.5em * 1);
                 }
 
                 .content {
                     font-size: 10px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 .comment {
@@ -196,7 +208,8 @@
     }
 }
 
-.Write_wrap, .InfoEat_Wrap {
+.Write_wrap,
+.InfoEat_Wrap {
     >div {
         padding: 20px;
 

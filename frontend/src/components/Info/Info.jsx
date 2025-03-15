@@ -6,7 +6,7 @@ const Info = () => {
     const navigation = useNavigate();
 
     useEffect(() => {
-        fetch('http://ooooo0516.dothome.co.kr/backend/info.php')
+        fetch('http://butsamgo.dothome.co.kr/backend/info.php')
             .then(response => response.json())
             .then(data => { setInfo(data); console.log(data) })
             .catch(error => console.error('Error fetching info:', error));
